@@ -54,4 +54,4 @@ requires:
   warnings: 0
 resources:
   repository: git://github.com/dakkar/plack-handler-stomp.git
-version: 0.1_02
+version: 1.0
