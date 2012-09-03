@@ -1,6 +1,6 @@
 package Plack::Handler::Stomp::Types;
 {
-  $Plack::Handler::Stomp::Types::VERSION = '1.02';
+  $Plack::Handler::Stomp::Types::VERSION = '1.03';
 }
 {
   $Plack::Handler::Stomp::Types::DIST = 'Plack-Handler-Stomp';
@@ -35,7 +35,6 @@ subtype PathMap, as Map[PathMapKey,Path];
 1;
 
 __END__
-
 =pod
 
 =encoding utf-8
@@ -46,7 +45,7 @@ Plack::Handler::Stomp::Types - type definitions for Plack::Handler::Stomp
 
 =head1 VERSION
 
-version 1.02
+version 1.03
 
 =head1 TYPES
 
@@ -78,3 +77,4 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
+

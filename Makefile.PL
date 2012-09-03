@@ -42,8 +42,8 @@ my %WriteMakefileArgs = (
     "MooseX::Types::Structured" => 0,
     "Net::Stomp" => 0,
     "Net::Stomp::Frame" => 0,
-    "Net::Stomp::MooseHelpers::CanConnect" => "1.1",
-    "Net::Stomp::MooseHelpers::CanSubscribe" => "1.1",
+    "Net::Stomp::MooseHelpers::CanConnect" => "v1.1.0",
+    "Net::Stomp::MooseHelpers::CanSubscribe" => "v1.1.0",
     "Net::Stomp::MooseHelpers::Exceptions" => 0,
     "Net::Stomp::MooseHelpers::ReadTrace" => 0,
     "Net::Stomp::MooseHelpers::ReconnectOnFailure" => 0,
@@ -59,7 +59,7 @@ my %WriteMakefileArgs = (
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "1.02",
+  "VERSION" => "1.03",
   "test" => {
     "TESTS" => "t/*.t"
   }

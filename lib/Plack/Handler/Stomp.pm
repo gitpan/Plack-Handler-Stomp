@@ -1,6 +1,6 @@
 package Plack::Handler::Stomp;
 {
-  $Plack::Handler::Stomp::VERSION = '1.02';
+  $Plack::Handler::Stomp::VERSION = '1.03';
 }
 {
   $Plack::Handler::Stomp::DIST = 'Plack-Handler-Stomp';
@@ -16,8 +16,8 @@ use namespace::autoclean;
 use Try::Tiny;
 use Plack::Util;
 
-with 'Net::Stomp::MooseHelpers::CanConnect' => { -version => '1.1' };
-with 'Net::Stomp::MooseHelpers::CanSubscribe' => { -version => '1.1' };
+with 'Net::Stomp::MooseHelpers::CanConnect' => { -version => '1.1.0' };
+with 'Net::Stomp::MooseHelpers::CanSubscribe' => { -version => '1.1.0' };
 with 'Net::Stomp::MooseHelpers::ReconnectOnFailure';
 
 # ABSTRACT: adapt STOMP to (almost) HTTP, via Plack
@@ -336,7 +336,6 @@ __PACKAGE__->meta->make_immutable;
 1;
 
 __END__
-
 =pod
 
 =encoding utf-8
@@ -347,7 +346,7 @@ Plack::Handler::Stomp - adapt STOMP to (almost) HTTP, via Plack
 
 =head1 VERSION
 
-version 1.02
+version 1.03
 
 =head1 SYNOPSIS
 
@@ -573,3 +572,4 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
+
