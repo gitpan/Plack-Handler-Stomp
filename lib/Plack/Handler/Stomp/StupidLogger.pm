@@ -1,6 +1,6 @@
 package Plack::Handler::Stomp::StupidLogger;
 {
-  $Plack::Handler::Stomp::StupidLogger::VERSION = '1.03';
+  $Plack::Handler::Stomp::StupidLogger::VERSION = '1.04';
 }
 {
   $Plack::Handler::Stomp::StupidLogger::DIST = 'Plack-Handler-Stomp';
@@ -35,6 +35,7 @@ sub error {
 1;
 
 __END__
+
 =pod
 
 =encoding utf-8
@@ -45,7 +46,7 @@ Plack::Handler::Stomp::StupidLogger - dead-simple logger for Plack::Handler::Sto
 
 =head1 VERSION
 
-version 1.03
+version 1.04
 
 =head1 METHODS
 
@@ -81,4 +82,3 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
