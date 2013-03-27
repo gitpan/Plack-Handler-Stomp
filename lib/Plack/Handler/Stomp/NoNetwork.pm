@@ -1,6 +1,6 @@
 package Plack::Handler::Stomp::NoNetwork;
 {
-  $Plack::Handler::Stomp::NoNetwork::VERSION = '1.06_02';
+  $Plack::Handler::Stomp::NoNetwork::VERSION = '1.07';
 }
 {
   $Plack::Handler::Stomp::NoNetwork::DIST = 'Plack-Handler-Stomp';
@@ -134,7 +134,6 @@ __PACKAGE__->meta->make_immutable;
 1;
 
 __END__
-
 =pod
 
 =encoding utf-8
@@ -145,7 +144,7 @@ Plack::Handler::Stomp::NoNetwork - like L<Plack::Handler::Stomp>, but without a 
 
 =head1 VERSION
 
-version 1.06_02
+version 1.07
 
 =head1 SYNOPSIS
 
@@ -217,3 +216,4 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
+
