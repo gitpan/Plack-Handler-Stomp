@@ -1,6 +1,6 @@
 package Plack::Handler::Stomp::PathInfoMunger;
 {
-  $Plack::Handler::Stomp::PathInfoMunger::VERSION = '1.07';
+  $Plack::Handler::Stomp::PathInfoMunger::VERSION = '1.08';
 }
 {
   $Plack::Handler::Stomp::PathInfoMunger::DIST = 'Plack-Handler-Stomp';
@@ -47,9 +47,10 @@ sub munge_path_info {
 1;
 
 __END__
+
 =pod
 
-=encoding utf-8
+=encoding UTF-8
 
 =head1 NAME
 
@@ -57,7 +58,7 @@ Plack::Handler::Stomp::PathInfoMunger - printf-style interpolations for PATH_INF
 
 =head1 VERSION
 
-version 1.07
+version 1.08
 
 =head1 FUNCTIONS
 
@@ -103,4 +104,3 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-

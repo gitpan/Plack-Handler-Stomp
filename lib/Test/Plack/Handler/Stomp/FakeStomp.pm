@@ -1,6 +1,6 @@
 package Test::Plack::Handler::Stomp::FakeStomp;
 {
-  $Test::Plack::Handler::Stomp::FakeStomp::VERSION = '1.07';
+  $Test::Plack::Handler::Stomp::FakeStomp::VERSION = '1.08';
 }
 {
   $Test::Plack::Handler::Stomp::FakeStomp::DIST = 'Plack-Handler-Stomp';
@@ -87,9 +87,10 @@ sub receive_frame {
 1;
 
 __END__
+
 =pod
 
-=encoding utf-8
+=encoding UTF-8
 
 =head1 NAME
 
@@ -97,7 +98,7 @@ Test::Plack::Handler::Stomp::FakeStomp - subclass of L<Net::Stomp>, half-mocked 
 
 =head1 VERSION
 
-version 1.07
+version 1.08
 
 =head1 DESCRIPTION
 
@@ -173,4 +174,3 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
