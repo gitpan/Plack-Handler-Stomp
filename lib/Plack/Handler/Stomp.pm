@@ -1,7 +1,5 @@
 package Plack::Handler::Stomp;
-{
-  $Plack::Handler::Stomp::VERSION = '1.08';
-}
+$Plack::Handler::Stomp::VERSION = '1.09';
 {
   $Plack::Handler::Stomp::DIST = 'Plack-Handler-Stomp';
 }
@@ -16,8 +14,8 @@ use namespace::autoclean;
 use Try::Tiny;
 use Plack::Util;
 
-with 'Net::Stomp::MooseHelpers::CanConnect' => { -version => '1.1' };
-with 'Net::Stomp::MooseHelpers::CanSubscribe' => { -version => '1.1' };
+with 'Net::Stomp::MooseHelpers::CanConnect' => { -version => '2.6' };
+with 'Net::Stomp::MooseHelpers::CanSubscribe' => { -version => '2.6' };
 with 'Net::Stomp::MooseHelpers::ReconnectOnFailure';
 
 # ABSTRACT: adapt STOMP to (almost) HTTP, via Plack
@@ -31,6 +29,16 @@ has logger => (
 sub _build_logger {
     require Plack::Handler::Stomp::StupidLogger;
     Plack::Handler::Stomp::StupidLogger->new();
+}
+
+sub _build_connection {
+    my ($self) = @_;
+
+    return $self->connection_builder->({
+        %{$self->extra_connection_builder_args},
+        logger => $self->logger,
+        hosts => $self->servers,
+    });
 }
 
 
@@ -347,7 +355,7 @@ Plack::Handler::Stomp - adapt STOMP to (almost) HTTP, via Plack
 
 =head1 VERSION
 
-version 1.08
+version 1.09
 
 =head1 SYNOPSIS
 
@@ -392,7 +400,9 @@ documentation to see how to configure servers and subscriptions.
 A logger object used by thes handler. Not to be confused by the logger
 used by the application (either internally, or via a Middleware). Can
 be any object that can C<debug>, C<info>, C<warn>, C<error>. Defaults
-to an instance of L<Plack::Handler::Stomp::StupidLogger>.
+to an instance of L<Plack::Handler::Stomp::StupidLogger>. This logger
+is passed on to the L<Net::Stomp> object held in C<connection> (see
+L<Net::Stomp::MooseHelpers::CanConnect>).
 
 =head2 C<destination_path_map>
 
