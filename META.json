@@ -91,6 +91,6 @@
          "web" : "https://github.com/dakkar/plack-handler-stomp"
       }
    },
-   "version" : "1.10"
+   "version" : "1.11"
 }
 
