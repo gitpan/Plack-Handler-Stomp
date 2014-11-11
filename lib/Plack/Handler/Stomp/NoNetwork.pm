@@ -1,5 +1,5 @@
 package Plack::Handler::Stomp::NoNetwork;
-$Plack::Handler::Stomp::NoNetwork::VERSION = '1.11';
+$Plack::Handler::Stomp::NoNetwork::VERSION = '1.12';
 {
   $Plack::Handler::Stomp::NoNetwork::DIST = 'Plack-Handler-Stomp';
 }
@@ -143,7 +143,7 @@ Plack::Handler::Stomp::NoNetwork - like L<Plack::Handler::Stomp>, but without a 
 
 =head1 VERSION
 
-version 1.11
+version 1.12
 
 =head1 SYNOPSIS
 

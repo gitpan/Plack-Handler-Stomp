@@ -1,5 +1,5 @@
 package Plack::Handler::Stomp;
-$Plack::Handler::Stomp::VERSION = '1.11';
+$Plack::Handler::Stomp::VERSION = '1.12';
 {
   $Plack::Handler::Stomp::DIST = 'Plack-Handler-Stomp';
 }
@@ -309,8 +309,8 @@ sub build_psgi_env {
 
         # http
         HTTP_USER_AGENT => 'Net::Stomp',
-        HTTP_CONTENT_LENGTH => length($frame->body),
-        HTTP_CONTENT_TYPE => $frame->headers->{'content-type'},
+        CONTENT_LENGTH => length($frame->body),
+        CONTENT_TYPE => $frame->headers->{'content-type'},
 
         # psgi
         'psgi.version' => [1,0],
@@ -355,7 +355,7 @@ Plack::Handler::Stomp - adapt STOMP to (almost) HTTP, via Plack
 
 =head1 VERSION
 
-version 1.11
+version 1.12
 
 =head1 SYNOPSIS
 
@@ -542,8 +542,8 @@ Builds a PSGI environment from the message, like:
 
   # http
   HTTP_USER_AGENT => 'Net::Stomp',
-  HTTP_CONTENT_LENGTH => length($body),
-  HTTP_CONTENT_TYPE => $content-type,
+  CONTENT_LENGTH => length($body),
+  CONTENT_TYPE => $content-type,
 
   # psgi
   'psgi.version' => [1,0],

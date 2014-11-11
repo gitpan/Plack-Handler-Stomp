@@ -1,3 +1,7 @@
+1.12      2014-11-11 14:40:06+00:00 Europe/London
+ - use CONTENT_LENGTH instead of HTTP_CONTENT_LENGTH, more closely
+   following the PSGI spec
+
 1.11      2014-07-29 10:38:26+01:00 Europe/London
  - use SingleEncoding (thanks sergeyromanov)
 
